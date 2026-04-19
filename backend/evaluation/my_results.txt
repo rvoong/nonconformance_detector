@@ -1,0 +1,31 @@
+VLM Evaluation Results
+Model: qwen2.5vl:7b
+Image: bolt_in_front_of_plane.png
+Inference Time: 2970ms
+In the image, there is a visible Foreign Object Debris (FOD) item in the foreground. Here is the description:
+
+- **Item**: The item appears to be a cylindrical object with text on it, which reads "48 FW - GOLDEN BOLT."
+- **Location**: It is lying on the ground in the foreground, closer to the bottom left corner of the image. The object is positioned horizontally and seems to be made of a material that could be wood or a similar substance.
+
+This item is likely FOD because it is on the ground in an area where aircraft are parked or moved, and it could potentially cause damage if ingested by an aircraft engine.
+
+Model: llava:7b
+Image: bolt_in_front_of_plane.png
+Inference Time: 3402ms
+ The image appears to show a military aircraft on the tarmac with personnel around it. On the ground next to the plane, there are several items that could be considered potential Foreign Object Debris (FOD):
+
+1. The first item is near the front of the aircraft, on the right side, and looks like a metal piece or a tool lying on the ground.
+2. There is another similar object located closer to the center of the image, between the two people who seem to be standing behind the aircraft, but it's partially obscured by their presence.
+3. On the far left, there appears to be an item that resembles a cylindrical metal rod or tube lying on the ground.
+4. The foreground of the image features what looks like a tool with a round head and a handle, which is placed prominently in front of the aircraft.
+5. There are also small screws or bolts visible on the ground, scattered around the area where the plane is parked.
+
+It's important to note that FOD in this context refers to objects on the ground that could potentially damage an aircraft if ingested into the engines during takeoff or landing. However, without more context or a clearer view of these items, it's difficult to definitively confirm if they are indeed foreign object debris or simply tools used for maintenance and operations around the airfield. 
+
+Model: moondream
+Image: bolt_in_front_of_plane.png
+Inference Time: 2243ms
+
+The image shows a bolt lying on the ground near an airplane. The bolt appears to be made of metal with a silver color. It is located towards the center-left part of the image. In the background, there are two airplanes visible - one large jet positioned in the top right corner and another smaller plane situated in the bottom left corner.
+
+

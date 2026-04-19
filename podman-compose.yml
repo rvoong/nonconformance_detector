@@ -1,0 +1,33 @@
+services:
+  minio:
+    image: quay.io/minio/aistor/minio:latest
+    container_name: minio
+    ports:
+      - "9002:9000"
+      - "9001:9001"
+    environment:
+      MINIO_ROOT_USER: minioadmin
+      MINIO_ROOT_PASSWORD: minioadmin
+    volumes:
+      - "${HOME}/minio/data:/mnt/data"
+      - "./backend/db/minio.license:/minio.license:ro"
+    command: ["minio", "server", "/mnt/data", "--license", "/minio.license"]
+    restart: unless-stopped
+
+  postgres:
+    image: postgres:16
+    ports:
+      - "5434:5432"
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: pass
+      POSTGRES_DB: appdb
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./backend/db/init.sql:/docker-entrypoint-initdb.d/init.sql
+      - ./backend/db/schema.sql:/docker-entrypoint-initdb.d/schema.sql
+      - ./backend/db/seed.sql:/docker-entrypoint-initdb.d/seed.sql
+    restart: unless-stopped
+
+volumes:
+  postgres_data:

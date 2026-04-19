@@ -1,0 +1,58 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+.Python
+*.egg-info/
+dist/
+build/
+
+# Virtual environment
+backend/venv/
+venv/
+.venv/
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# SQLite database
+*.db
+*.sqlite
+*.sqlite3
+
+# Local file storage (Option A edge mode)
+backend/storage/
+
+# Test & coverage
+.coverage
+.coveragerc
+coverage.xml
+htmlcov/
+code_coverage/
+.pytest_cache/
+
+# Node.js
+node_modules/
+frontend/node_modules/
+.npm
+
+# Next.js
+frontend/.next/
+frontend/out/
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.iml
